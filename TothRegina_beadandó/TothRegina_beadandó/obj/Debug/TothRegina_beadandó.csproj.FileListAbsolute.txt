@@ -1,0 +1,15 @@
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\bin\Debug\TothRegina_beadandó.exe.config
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\bin\Debug\TothRegina_beadandó.exe
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\bin\Debug\TothRegina_beadandó.pdb
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\obj\Debug\TothRegina_beadandó.csprojAssemblyReference.cache
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\obj\Debug\MainWindow.g.cs
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\obj\Debug\App.g.cs
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\obj\Debug\TothRegina_beadandó_MarkupCompile.cache
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\obj\Debug\TothRegina_beadandó_MarkupCompile.lref
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\obj\Debug\MainWindow.baml
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\obj\Debug\TothRegina_beadandó.g.resources
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\obj\Debug\TothRegina_beadandó.Properties.Resources.resources
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\obj\Debug\TothRegina_beadandó.csproj.GenerateResource.cache
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\obj\Debug\TothRegina_beadandó.csproj.CoreCompileInputs.cache
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\obj\Debug\TothRegina_beadandó.exe
+D:\Egyetem\4.félév\Szoftvertechnológia és grafikus felhasználói interfész tervezése\Beadandó\Beadando\TothRegina_beadandó\TothRegina_beadandó\obj\Debug\TothRegina_beadandó.pdb
