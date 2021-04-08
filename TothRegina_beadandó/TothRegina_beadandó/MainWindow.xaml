@@ -35,16 +35,16 @@
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Számla 1"/>
         <TextBlock Grid.Column="1" Grid.Row="2" Text="Számla tulajdonos:"/>
         <TextBlock Grid.Column="1" Grid.Row="3" Text="Számla egyenlege:"/>
-        <TextBox Grid.Row="2" Grid.Column="2"/>
-        <TextBox Grid.Row="3" Grid.Column="2"/>
+        <TextBox IsReadOnly="True" x:Name="Szamla1Tul" Grid.Row="2" Grid.Column="2"/>
+        <TextBox IsReadOnly="True" x:Name="Szamla1Egyen" Grid.Row="3" Grid.Column="2"/>
         <TextBlock Grid.Column="3" Grid.Row="3" Text="Ft"/>
 
         <!--Második számla-->
         <TextBlock Grid.Column="5" Grid.Row="1" Text="Számla 2"/>
         <TextBlock Grid.Column="5" Grid.Row="2" Text="Számla tulajdonos:"/>
         <TextBlock Grid.Column="5" Grid.Row="3" Text="Számla egyenlege:"/>
-        <TextBox Grid.Row="2" Grid.Column="6"/>
-        <TextBox Grid.Row="3" Grid.Column="6"/>
+        <TextBox  Text="Béta" IsReadOnly="True" x:Name="Szamla2Tul" Grid.Row="2" Grid.Column="6"/>
+        <TextBox  IsReadOnly="True" x:Name="Szamla2Egyen" Grid.Row="3" Grid.Column="6"/>
         <TextBlock Grid.Column="7" Grid.Row="3" Text="Ft"/>
 
         
@@ -52,26 +52,25 @@
         
         <!--Beviteli mezők-->
         <TextBlock Grid.Column="1" Grid.Row="5" Text="Beviteli mező:"/>
-        <TextBox Grid.Row="5" Grid.Column="2"/>
-        <TextBlock Grid.Column="3" Grid.Row="5" Text="Ft"/>
-        
+        <TextBox x:Name="Bevitel1" Grid.Row="5" Grid.Column="2" />
+        <TextBlock Grid.Column="3" Grid.Row="5" Text="Ft" />
         <TextBlock Grid.Column="5" Grid.Row="5" Text="Beviteli mező:"/>
-        <TextBox Grid.Row="5" Grid.Column="6"/>
+        <TextBox x:Name="Bevitel2" Grid.Row="5" Grid.Column="6"/>
         <TextBlock Grid.Column="7" Grid.Row="5" Text="Ft"/>
 
         <!--Gombok-->
         <StackPanel Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal">
-            <Button Content="Feltöltés" Margin="5" Width="58"/>
-            <Button Content="Utalás"  Margin="5" Width="49"/>
-            <Button Content="Kivét"  Margin="5" Width="42"/>
-            <Button Content="Tulaj név váltás"  Margin="5" Width="99"/>
+            <Button x:Name="Feltolt1" Click="Feltolt1_Click" Content="Feltöltés" Margin="5" Width="58"/>
+            <Button x:Name="Utalas1" Click="Utalas1_Click" Content="Utalás"  Margin="5" Width="49"/>
+            <Button x:Name="Kivet1" Click="Kivet1_Click" Content="Kivét"  Margin="5" Width="42"/>
+            <Button x:Name="NevValtas1" Click="NevValtas1_Click" Content="Tulaj név váltás"  Margin="5" Width="99"/>
         </StackPanel>
 
         <StackPanel Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="3" Orientation="Horizontal">
-            <Button Content="Feltöltés" Margin="5" Width="58"/>
-            <Button Content="Utalás"  Margin="5" Width="49"/>
-            <Button Content="Kivét"  Margin="5" Width="42"/>
-            <Button Content="Tulaj név váltás"  Margin="5" Width="99"/>
+            <Button x:Name="Feltolt2" Click="Feltolt2_Click" Content="Feltöltés" Margin="5" Width="58"/>
+            <Button x:Name="Utalas2" Click="Utalas2_Click" Content="Utalás"  Margin="5" Width="49"/>
+            <Button x:Name="Kivet2" Click="Kivet2_Click" Content="Kivét"  Margin="5" Width="42"/>
+            <Button x:Name="NevValtas2" Click="NevValtas2_Click" Content="Tulaj név váltás"  Margin="5" Width="99"/>
         </StackPanel>
     </Grid>
 </Window>
