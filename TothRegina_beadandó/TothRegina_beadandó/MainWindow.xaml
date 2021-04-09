@@ -36,15 +36,15 @@
         <TextBlock Grid.Column="1" Grid.Row="2" Text="Számla tulajdonos:"/>
         <TextBlock Grid.Column="1" Grid.Row="3" Text="Számla egyenlege:"/>
         <TextBox IsReadOnly="True" x:Name="Szamla1Tul" Grid.Row="2" Grid.Column="2"/>
-        <TextBox IsReadOnly="True" x:Name="Szamla1Egyen" Grid.Row="3" Grid.Column="2"/>
+        <TextBox IsReadOnly="True"  x:Name="Szamla1Egyen" Grid.Row="3" Grid.Column="2"/>
         <TextBlock Grid.Column="3" Grid.Row="3" Text="Ft"/>
 
         <!--Második számla-->
         <TextBlock Grid.Column="5" Grid.Row="1" Text="Számla 2"/>
         <TextBlock Grid.Column="5" Grid.Row="2" Text="Számla tulajdonos:"/>
         <TextBlock Grid.Column="5" Grid.Row="3" Text="Számla egyenlege:"/>
-        <TextBox  Text="Béta" IsReadOnly="True" x:Name="Szamla2Tul" Grid.Row="2" Grid.Column="6"/>
-        <TextBox  IsReadOnly="True" x:Name="Szamla2Egyen" Grid.Row="3" Grid.Column="6"/>
+        <TextBox  IsReadOnly="True" x:Name="Szamla2Tul" Grid.Row="2" Grid.Column="6"/>
+        <TextBox IsReadOnly="True"   x:Name="Szamla2Egyen" Grid.Row="3" Grid.Column="6"/>
         <TextBlock Grid.Column="7" Grid.Row="3" Text="Ft"/>
 
         
