@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TothRegina_beadandó</name>
+    </assembly>
+    <members>
+        <member name="T:TothRegina_beadandó.HibaUzenet">
+            <summary>
+            Interaction logic for HibaUzenet.xaml
+            </summary>
+            <summary>
+            HibaUzenet
+            </summary>
+        </member>
+        <member name="M:TothRegina_beadandó.HibaUzenet.#ctor(System.String)">
+            <summary>
+            A hibaüzenet ablakhoz tartozó konstruktor, amely beállítja a kapott üzenetet.
+            </summary>
+            <param name="uzenet"></param>
+        </member>
+        <member name="M:TothRegina_beadandó.HibaUzenet.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:TothRegina_beadandó.Szamla">
+            <summary>
+            Egy számla adatait leíró osztály
+            </summary>
+        </member>
+        <member name="P:TothRegina_beadandó.Szamla.egyenleg">
+             <summary>
+             A számla példány egyenlegét tárolja.
+             </summary>
+            <value>
+             Intet tartalmazó változó
+             </value>
+        </member>
+        <member name="P:TothRegina_beadandó.Szamla.tulaj">
+            <summary>
+            A számla példány tulajdonosának nevét tárolja.
+            </summary>
+            <value>
+            Stringet tartalmazó változó
+            </value>
+            
+        </member>
+        <member name="P:TothRegina_beadandó.Szamla.Tulaj">
+            <summary>
+            Getter, amely vissza adja a számla tulajdonosának a nevét.
+            </summary>
+            <value>
+            Egy stringet ad vissza
+            </value>
+        </member>
+        <member name="P:TothRegina_beadandó.Szamla.Egyenleg">
+            <summary>
+            Getter, amely vissza adja a számla egyenlegét.
+            </summary>
+            <value>
+            Egy intet ad vissza
+            </value>
+        </member>
+        <member name="M:TothRegina_beadandó.Szamla.#ctor(System.Int32,System.String)">
+            <summary>
+            A konstruktor beállítja a példány egyenlegét és tulajdonosának nevét.
+            </summary>
+            <param name="egy">A számla egyenlege</param>
+            <param name="tul">A számla tulajdonosának neve</param>
+        </member>
+        <member name="M:TothRegina_beadandó.Szamla.Egyenlegno(System.Int32)">
+            <summary>
+            Az osztály metódusa amely a kapott értékkel növeli a számla egyenlegét.
+            </summary>
+            <param name="x">Az érték amivel növelni kell az egyenleget</param>
+        </member>
+        <member name="M:TothRegina_beadandó.Szamla.Egyenlegcsokk(System.Int32)">
+            <summary>
+            Az osztály metódusa amely a kapott értékkel csökkenti a számla egyenlegét.
+            </summary>
+            <param name="x">Az érték amivel csökkenteni kell az egyenleget</param>
+        </member>
+        <member name="M:TothRegina_beadandó.Szamla.NevValt(System.String)">
+            <summary>
+            Az osztály metódusa amely a kapott névre cseréli a számla tulajdonosának a nevét.
+            </summary>
+            <param name="n">Az új név</param>
+        </member>
+        <member name="T:TothRegina_beadandó.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:TothRegina_beadandó.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:TothRegina_beadandó.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:TothRegina_beadandó.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="F:TothRegina_beadandó.MainWindow.szamla1">
+            <summary>
+            Az egyes számla példány
+            </summary>
+        </member>
+        <member name="F:TothRegina_beadandó.MainWindow.szamla2">
+            <summary>
+            A kettes számla példány
+            </summary>
+        </member>
+        <member name="M:TothRegina_beadandó.MainWindow.#ctor">
+            <summary>
+            GUI-t rajzol, kiírja az "alapértelmezett" értékeket
+            </summary>
+        </member>
+        <member name="M:TothRegina_beadandó.MainWindow.Feltolt1_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Az első számlához tartozó feltöltő metódus. 
+            </summary>
+            <param name="sender">Hívást indító objektum</param>
+            <param name="e">Az esemény ami bekövetkezett</param>
+            <remarks>
+            A bal oldali feltölt gomb lenyomása esetén ellenőrzi az egyes beviteli mező értékét. Ha szöveget vagy negatív értéket tartalmaz akkor hiba üzenetet dob egy új ablakban.
+            Ha az érték egy pozitív szám akkor növeli a számla egyenlegét.
+            </remarks>
+        </member>
+        <member name="M:TothRegina_beadandó.MainWindow.Utalas1_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Az első számla utalását végző metódus.
+            </summary>
+            <param name="sender">Hívást indító objektum</param>
+            <param name="e">Az esemény ami bekövetkezett</param>
+            <remarks>
+            A bal oldali utalás gomb lenyomása esetén ellenőrzi az egyes beviteli mező értékét. Ha szöveget vagy negatív értéket tartalmaz akkor hiba üzenetet dob egy új ablakban.
+            Ha az érték egy pozitív szám akkor megnézi, hogy elég pénz van-e a számlán és ha igen akkor elvégzi az utalást a két számla között.
+            </remarks>
+        </member>
+        <member name="M:TothRegina_beadandó.MainWindow.Kivet1_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Az első számla egyenlegét csökkentő metódus.
+            </summary>
+            <param name="sender">Hívást indító objektum</param>
+            <param name="e">Az esemény ami bekövetkezett</param>
+            <remarks>
+            A bal oldali kivét gomb lenyomása esetén először ellenőrzi az egyes beviteli mező értékét. Ha a bevitt érték nem szám vagy negatív szám akkor hibaüzenetet dob egy új ablakban. 
+            Ha az érték egy pozitív szám akkor megnézi, hogy elég pénz van-e a számlán és ha igen akkor növeli a számla egyenlegét a megadott összeggel.
+            </remarks>
+        </member>
+        <member name="M:TothRegina_beadandó.MainWindow.NevValtas1_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Az egyes számla tulajdonosának nevét megváltoztató metódus.
+            </summary>
+            <param name="sender">Hívást indító objektum</param>
+            <param name="e">Az esemény ami bekövetkezett</param>
+            <remarks>
+            A bal oldali tulajdonos név váltás gomb lenyomása esetén először ellenőrizzük az egyes beviteli mező értékét.
+            Ha az érték számot tartalmaz akkor hiba üzenetet dob egy új ablakban, ha pedig helyes akkor beállítja az új nevet.
+            </remarks>
+        </member>
+        <member name="M:TothRegina_beadandó.MainWindow.Feltolt2_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Az második számlához tartozó feltöltő metódus.
+            </summary>
+            <param name="sender">Hívást indító objektum</param>
+            <param name="e">Az esemény ami bekövetkezett</param>
+            <remarks>
+            A jobb oldali feltölt gomb lenyomása esetén ellenőrzi a kettes beviteli mező értékét. Ha szöveget vagy negatív értéket tartalmaz akkor hiba üzenetet dob egy új ablakban.
+            Ha az érték egy pozitív szám akkor növeli a számla egyenlegét.
+            </remarks>
+        </member>
+        <member name="M:TothRegina_beadandó.MainWindow.Utalas2_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            A második számla utalását végző metódus.
+            </summary>
+            <param name="sender">Hívást indító objektum</param>
+            <param name="e">Az esemény ami bekövetkezett</param>
+            <remarks>
+            A jobb oldali utalás gomb lenyomása esetén ellenőrzi a kettes beviteli mező értékét. Ha szöveget vagy negatív értéket tartalmaz akkor hiba üzenetet dob egy új ablakban.
+            Ha az érték egy pozitív szám akkor megnézi, hogy elég pénz van-e a számlán és ha igen akkor elvégzi az utalást a két számla között.
+            </remarks>
+        </member>
+        <member name="M:TothRegina_beadandó.MainWindow.Kivet2_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            A második számla egyenlegét csökkentő metódus.
+            </summary>
+            <param name="sender">Hívást indító objektum</param>
+            <param name="e">Az esemény ami bekövetkezett</param>
+            <remarks>
+            A jobb oldali kivét gomb lenyomása esetén először ellenőrzi a kettes beviteli mező értékét. Ha a bevitt érték nem szám vagy negatív szám akkor hibaüzenetet dob egy új ablakban. 
+            Ha az érték egy pozitív szám akkor megnézi, hogy elég pénz van-e a számlán és ha igen akkor növeli a számla egyenlegét a megadott összeggel.
+            </remarks>
+        </member>
+        <member name="M:TothRegina_beadandó.MainWindow.NevValtas2_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            A második számla tulajdonosának nevét megváltoztató metódus.
+            </summary>
+            <param name="sender">Hívást indító objektum</param>
+            <param name="e">Az esemény ami bekövetkezett</param>
+            <remarks>
+            A jobb oldali tulajdonos név váltás gomb lenyomása esetén először ellenőrizzük a kettes beviteli mező értékét.
+            Ha az érték számot tartalmaz akkor hiba üzenetet dob egy új ablakban, ha pedig helyes akkor beállítja az új nevet.
+            </remarks>
+        </member>
+        <member name="M:TothRegina_beadandó.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:TothRegina_beadandó.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TothRegina_beadandó.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TothRegina_beadandó.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -56,26 +56,28 @@ namespace TothRegina_beadandó
         /// </remarks>
         private void Feltolt1_Click(object sender, RoutedEventArgs e)
         {
-            int osszeg;
-            bool szame = Int32.TryParse(Bevitel1.Text, out osszeg);
-            if (szame)
-            {
-                if (Convert.ToInt32(Bevitel1.Text) < 0)   
-                {
-                    HibaUzenet hiba = new HibaUzenet("Nem adhat meg negatív értéket!");
+            try 
+	            {	        
+		            int osszeg = Convert.ToInt32(Bevitel1.Text);
+                        if (osszeg < 0)   
+                        {
+                    Bevitel1.Text ="";
+                            HibaUzenet hiba = new HibaUzenet("Nem adhat meg negatív értéket!");
+                            hiba.Show();
+                        }
+                        else
+                        {
+                            szamla1.Egyenlegno(osszeg);
+                            Szamla1Egyen.Text = Convert.ToString(szamla1.Egyenleg);
+                        }         
+	            }
+	            catch (Exception exc)
+	            {
+                Bevitel1.Text ="";
+                    HibaUzenet hiba = new HibaUzenet(exc.Message);
                     hiba.Show();
-                }
-                else
-                {
-                    szamla1.Egyenlegno(osszeg);
-                    Szamla1Egyen.Text = Convert.ToString(szamla1.Egyenleg);
-                }
-            }
-            else
-            {
-                HibaUzenet hiba = new HibaUzenet("Nem számot adott meg!");
-                hiba.Show();
-            } 
+	            }
+            
         }
 
         /// <summary>
@@ -89,12 +91,12 @@ namespace TothRegina_beadandó
         /// </remarks>
         private void Utalas1_Click(object sender, RoutedEventArgs e)
         {
-            int osszeg;
-            bool szame = Int32.TryParse(Bevitel1.Text, out osszeg);
-            if (szame)
-            {
-                if (Convert.ToInt32(Bevitel1.Text) < 0)
+            try 
+	        {	        
+		        int osszeg = Convert.ToInt32(Bevitel1.Text);
+                if (osszeg < 0)
                 {
+                    Bevitel1.Text ="";
                     HibaUzenet hiba = new HibaUzenet("Nem adhat meg negatív értéket!");
                     hiba.Show();
                 }
@@ -102,6 +104,7 @@ namespace TothRegina_beadandó
                 {
                     if ((szamla1.Egyenleg - osszeg) < 0)
                     {
+                        Bevitel1.Text ="";
                         HibaUzenet hiba = new HibaUzenet("Nincs elég pénz a számláján!\n Adjon meg kisebb összeget!");
                         hiba.Show();
                     }
@@ -113,12 +116,14 @@ namespace TothRegina_beadandó
                         Szamla2Egyen.Text = Convert.ToString(szamla2.Egyenleg);
                     }
                 }
-            }
-            else
-            {
-                HibaUzenet hiba = new HibaUzenet("Nem számot adott meg!");
-                hiba.Show();
-            }        
+	        }
+	        catch (Exception exc)
+	        {
+                Bevitel1.Text ="";
+                HibaUzenet hiba = new HibaUzenet(exc.Message);
+                    hiba.Show();
+	        }
+           
         }
 
         /// <summary>
@@ -132,12 +137,12 @@ namespace TothRegina_beadandó
         /// </remarks>
         private void Kivet1_Click(object sender, RoutedEventArgs e)
         {
-            int osszeg;
-            bool szame = Int32.TryParse(Bevitel1.Text, out osszeg);
-            if (szame)
-            {
-                if (Convert.ToInt32(Bevitel1.Text) < 0)
+            try 
+	        {	        
+		        int osszeg =Convert.ToInt32(Bevitel1.Text);
+                if (osszeg < 0)
                 {
+                    Bevitel1.Text ="";
                     HibaUzenet hiba = new HibaUzenet("Nem adhat meg negatív értéket!");
                     hiba.Show();
                 }
@@ -145,6 +150,7 @@ namespace TothRegina_beadandó
                 {
                     if ((szamla1.Egyenleg - osszeg) < 0)
                     {
+                        Bevitel1.Text ="";
                         HibaUzenet hiba = new HibaUzenet("Nincs elég pénz a számláján!\n Adjon meg kisebb összeget!");
                         hiba.Show();
                     }
@@ -154,12 +160,13 @@ namespace TothRegina_beadandó
                         Szamla1Egyen.Text = Convert.ToString(szamla1.Egyenleg);
                     }            
                 }
-            }
-            else
-            {
-                HibaUzenet hiba = new HibaUzenet("Nem számot adott meg!");
-                hiba.Show();
-            }
+	        }
+	        catch (Exception exc)
+	        {
+                Bevitel1.Text ="";
+                HibaUzenet hiba = new HibaUzenet(exc.Message);
+                    hiba.Show();
+	        }        
         }
 
         /// <summary>
@@ -173,7 +180,9 @@ namespace TothRegina_beadandó
         /// </remarks>
         private void NevValtas1_Click(object sender, RoutedEventArgs e)
         {
-            bool vaneszam= false;
+            try 
+	        {	        
+		        bool vaneszam= false;
             for (int i = 0; i < Bevitel1.Text.Length; i++)
             {
                 if (!char.IsDigit(Bevitel1.Text[i]))
@@ -188,6 +197,7 @@ namespace TothRegina_beadandó
             }
             if (vaneszam)
             {
+                    Bevitel1.Text ="";
                 HibaUzenet hiba = new HibaUzenet("A tulaj nevében nem lehet szám!");
                 hiba.Show();
             }
@@ -196,6 +206,14 @@ namespace TothRegina_beadandó
                 szamla1.tulaj = Bevitel1.Text;
                 Szamla1Tul.Text = szamla1.tulaj;
             }
+	        }
+	        catch (Exception exc)
+	        {
+                Bevitel1.Text ="";
+                HibaUzenet hiba = new HibaUzenet(exc.Message);
+                    hiba.Show();
+	        }
+            
             
         }
 
@@ -210,12 +228,12 @@ namespace TothRegina_beadandó
         /// </remarks>
         private void Feltolt2_Click(object sender, RoutedEventArgs e)
         {
-            int osszeg;
-            bool szame = Int32.TryParse(Bevitel2.Text, out osszeg);
-            if (szame)
-            {
-                if (Convert.ToInt32(Bevitel2.Text) < 0)
+            try 
+	        {	        
+		         int osszeg = Convert.ToInt32(Bevitel2.Text);
+                if (osszeg < 0)
                 {
+                    Bevitel2.Text ="";
                     HibaUzenet hiba = new HibaUzenet("Nem adhat meg negatív értéket!");
                     hiba.Show();
                 }
@@ -224,12 +242,13 @@ namespace TothRegina_beadandó
                     szamla2.Egyenlegno(osszeg);
                     Szamla2Egyen.Text = Convert.ToString(szamla2.Egyenleg);
                 }
-            }
-            else
-            {
-                HibaUzenet hiba = new HibaUzenet("Nem számot adott meg!");
-                hiba.Show();
-            }
+	        }
+	        catch (Exception exc)
+	        {
+                Bevitel2.Text ="";
+                HibaUzenet hiba = new HibaUzenet(exc.Message);
+                    hiba.Show();
+	        }          
         }
 
         /// <summary>
@@ -243,12 +262,12 @@ namespace TothRegina_beadandó
         /// </remarks>
         private void Utalas2_Click(object sender, RoutedEventArgs e)
         {
-            int osszeg;
-            bool szame = Int32.TryParse(Bevitel2.Text, out osszeg);
-            if (szame)
-            {
-                if (Convert.ToInt32(Bevitel2.Text) < 0)
+            try 
+	        {	        
+		        int osszeg=Convert.ToInt32(Bevitel2.Text);
+                if (osszeg < 0)
                 {
+                    Bevitel2.Text ="";
                     HibaUzenet hiba = new HibaUzenet("Nem adhat meg negatív értéket!");
                     hiba.Show();
                 }
@@ -256,6 +275,7 @@ namespace TothRegina_beadandó
                 {
                     if ((szamla2.Egyenleg-osszeg)<0)
                     {
+                        Bevitel2.Text ="";
                         HibaUzenet hiba = new HibaUzenet("Nincs elég pénz a számláján!\n Adjon meg kisebb összeget!");
                         hiba.Show();
                     }
@@ -267,12 +287,13 @@ namespace TothRegina_beadandó
                         Szamla2Egyen.Text = Convert.ToString(szamla2.Egyenleg);
                     }             
                 }
-            }
-            else
-            {
-                HibaUzenet hiba = new HibaUzenet("Nem számot adott meg!");
+	        }
+	        catch (Exception exc)
+	        {
+                Bevitel2.Text ="";
+                HibaUzenet hiba = new HibaUzenet(exc.Message);
                 hiba.Show();
-            }
+	        }
         }
 
         /// <summary>
@@ -286,12 +307,12 @@ namespace TothRegina_beadandó
         /// </remarks>
         private void Kivet2_Click(object sender, RoutedEventArgs e)
         {
-            int osszeg;
-            bool szame = Int32.TryParse(Bevitel2.Text, out osszeg);
-            if (szame)
-            {
-                if (Convert.ToInt32(Bevitel2.Text) < 0)
+            try 
+	        {	        
+		         int osszeg = Convert.ToInt32(Bevitel2.Text);
+                if (osszeg < 0)
                 {
+                    Bevitel2.Text ="";
                     HibaUzenet hiba = new HibaUzenet("Nem adhat meg negatív értéket!");
                     hiba.Show();
                 }
@@ -299,6 +320,7 @@ namespace TothRegina_beadandó
                 {
                     if ((szamla2.Egyenleg - osszeg) < 0)
                     {
+                        Bevitel2.Text ="";
                         HibaUzenet hiba = new HibaUzenet("Nincs elég pénz a számláján!\n Adjon meg kisebb összeget!");
                         hiba.Show();
                     }
@@ -308,12 +330,14 @@ namespace TothRegina_beadandó
                         Szamla2Egyen.Text = Convert.ToString(szamla2.Egyenleg);
                     }
                 }
-            }
-            else
-            {
-                HibaUzenet hiba = new HibaUzenet("Nem számot adott meg!");
+	        }
+	        catch (Exception exc)
+	        {
+                Bevitel2.Text ="";
+                 HibaUzenet hiba = new HibaUzenet(exc.Message);
                 hiba.Show();
-            }       
+	        }
+                     
         }
 
         /// <summary>
@@ -327,7 +351,9 @@ namespace TothRegina_beadandó
         /// </remarks>
         private void NevValtas2_Click(object sender, RoutedEventArgs e)
         {
-            bool vaneszam = false;
+            try 
+	        {	        
+		         bool vaneszam = false;
             for (int i = 0; i < Bevitel2.Text.Length; i++)
             {
                 if (!char.IsDigit(Bevitel2.Text[i]))
@@ -344,12 +370,21 @@ namespace TothRegina_beadandó
             {
                 HibaUzenet hiba = new HibaUzenet("A tulaj nevében nem lehet szám!");
                 hiba.Show();
+                    Bevitel2.Text ="";
             }
             else
             {
                 szamla2.tulaj = Bevitel2.Text;
                 Szamla2Tul.Text = szamla2.tulaj;
             }
+	        }
+	        catch (Exception exc)
+	        {
+                HibaUzenet hiba = new HibaUzenet(exc.Message);
+                hiba.Show();
+                Bevitel2.Text ="";
+	        }
+           
         }
     }
 }
